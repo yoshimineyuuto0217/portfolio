@@ -1,4 +1,7 @@
 import React from "react";
+import List from "./List";
+import AboutMe from "./AboutMe";
+import Contact from "./Contact";
 
 
 const MainView = () => {
@@ -7,9 +10,9 @@ const MainView = () => {
       <div className="view">
         <img src="/images/big-photo0000-2780.jpg" alt="メインの画像です" />
       </div>
-      <div className="view">
-        <img src="/images/big-photo0000-2780.jpg" alt="メインの画像です" />
-      </div>
+        <List/>
+        <AboutMe/>
+        <Contact/>
     </>
   );
 };
