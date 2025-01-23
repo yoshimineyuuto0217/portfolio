@@ -13,7 +13,7 @@ const Contact = () => {
     <input type='text'></input>
     <label for="number">Message</label>
     <textarea id="message" name="message" rows="20" cols="100"></textarea>
-    <div className='submit'>
+    <div className='submit common'>
     <button>submit</button>
     </div>
     </form>

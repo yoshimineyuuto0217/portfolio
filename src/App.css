@@ -1,3 +1,7 @@
+body {
+  font-family: "Cormorant Garamond", serif;
+}
+
 .common {
   padding-left: 2%;
   padding-right: 2%;
@@ -14,7 +18,7 @@
   padding-top: 2%;
   width: 20%;
   height: 100vh;
-  border-right: 0.5px solid black;
+  border-right: 1px solid black;
 }
 @media (max-width: 900px) {
   .container .side {
@@ -48,8 +52,8 @@
 }
 /* サイドバーcss */
 .contain {
-  width: 60%;
-  height: 90vh;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -67,9 +71,10 @@
 
 .sidelink {
   text-align: center;
+  margin-bottom: 25px;
 }
 .sidelink ul {
-  padding-left: 0px;
+  border-bottom: 1px solid #000;
 }
 
 .sidelink ul li {
@@ -77,14 +82,28 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 30px;
-  border-radius: 90px;
   margin: 0 auto;
   background-color: #f6cf59;
-  list-style: none;
-  margin-bottom: 20px;
-  color: black;
-  border: 1px solid black;
+  border-top: 1px solid #000;
+  position: relative;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  /* box-shadow: -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+  10px 10px 20px 0px rgba(0, 0, 0, 0.3); */
+}
+.sidelink ul li:hover {
+  box-shadow: inset -5px -5px 20px 0px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 20px 0px rgba(0, 0, 0, 0.3);
+}
+.sidelink ul li ::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .sidelink ul li a {
@@ -96,7 +115,7 @@
 .sns {
   padding: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
 }
 .sns .instagram {
   max-width: 25px;
@@ -122,10 +141,11 @@
 h2 {
   padding-top: 2%;
   padding-bottom: 2%;
-  border-top: 0.5px solid black;
-  border-bottom: 0.5px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   text-align: center;
   margin-bottom: 100px;
+  font-size: 2.5em;
 }
 
 .works {
@@ -169,6 +189,7 @@ h2 {
 }
 .works .block .detail p {
   display: inline;
+  font-family: "Zen Old Mincho", serif;
 }
 .works .block .detail .virtual {
   border: 1px solid black;
@@ -188,8 +209,12 @@ h2 {
   justify-content: center;
   align-items: center;
   border-radius: 90px;
+  box-shadow: 0px 15px 20px -6px rgba(0, 0, 0, 1);
 }
-
+.btn:hover {
+  box-shadow: inset -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 10px 0px rgba(255, 255, 255, 0.5);
+}
 .btn button {
   width: 100%;
   height: 100%;
@@ -202,6 +227,7 @@ h2 {
 
 /* aboutページのcss */
 .about_content {
+  text-align:center;
   position: relative;
   margin: 4%;
   max-width: 1000px;
@@ -222,7 +248,7 @@ h2 {
   height: 450px;
   margin-right: 20px;
 }
-/* .about_content .about-image::after {
+.about_content .about-image::after {
   content: "";
   top: 3%;
   left: 3%;
@@ -233,7 +259,7 @@ h2 {
   width: 100%;
   height: 450px;
   background-color: #f6cf59;
-} */
+}
 @media (max-width: 620px) {
   .about_content .about_image {
     width: 100%;
@@ -254,7 +280,7 @@ h2 {
   margin-top: 50px;
 }
 
-.about_content .about_text  {
+.about_content .about_text {
   width: 45%;
   margin: auto;
 }
@@ -279,15 +305,17 @@ h2 {
 .about_content .about_text .about_button {
   width: 250px;
   height: 30px;
-  position: absolute;
-  right: 5%;
-  bottom: 3%;
-  height: 30px;
-  background-color: #f6cf59;
-  display: flex;
-  justify-content: center;
+  margin: auto;
   align-items: center;
-  border-radius: 90px;
+  border:  1px solid #f6cf59;
+}
+.about_content .about_text .about_button a {
+  text-decoration: none;
+  color: #000;
+}
+.about_content .about_text .about_button:hover {
+  box-shadow: inset -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 10px 0px rgba(255, 255, 255, 0.5);
 }
 @media (max-width: 620px) {
   .about_content .about_text .about_button {
@@ -312,14 +340,14 @@ h2 {
 }
 .contact input {
   padding: 1%;
-  border: 0.5px solid black;
+  border: 1px solid black;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
 .contact textarea {
   padding: 1%;
-  border: 0.5px solid black;
+  border: 1px solid black;
   border-radius: 10px;
   margin-bottom: 50px;
 }
@@ -327,7 +355,7 @@ h2 {
 /* フッター部分 */
 .footer {
   padding: 0.5%;
-  border-top: 0.5px solid #000;
+  border-top: 1px solid #000;
   text-align: center;
 }
 .Biography {
@@ -355,7 +383,7 @@ h2 {
   width: 30%;
   height: 150px;
   font-size: 1.8em;
-  border-right: 0.5px;
+  border-right: 1px;
   position: relative;
 }
 .table .year .mm::before {
@@ -473,13 +501,14 @@ h2 {
   padding-left: 5%;
   padding-right: 5%;
   text-align: left;
+  font-family: "Zen Old Mincho", serif;
 }
 @media (max-width: 620px) {
   .strengths p {
     padding-left: 0%;
-  padding-right: 0%;
-  text-align: left;
-  margin-bottom: 50px;
+    padding-right: 0%;
+    text-align: left;
+    margin-bottom: 50px;
   }
 }
 h4 {
@@ -521,7 +550,7 @@ h4 {
   width: calc(1000px / 3);
 }
 @media (max-width: 620px) {
-  .strengths .one{
+  .strengths .one {
     width: 100%;
   }
 }
@@ -530,7 +559,7 @@ h4 {
   margin-bottom: 50px;
 }
 @media (max-width: 620px) {
-  .strengths .two{
+  .strengths .two {
     width: 100%;
     margin-bottom: 50px;
   }
@@ -539,8 +568,24 @@ h4 {
   width: calc(1000px / 3);
 }
 @media (max-width: 620px) {
-  .strengths .three{
+  .strengths .three {
     width: 100%;
     margin-bottom: 50px;
   }
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  background-color: #f6cf59;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: 0px 15px 20px -6px rgba(0, 0, 0, 1);
+}
+
+.submit:hover {
+  box-shadow: inset -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+    inset 5px 5px 10px 0px rgba(255, 255, 255, 0.5);
 }

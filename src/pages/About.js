@@ -3,6 +3,7 @@ import AboutMe from './AboutMe'
 import Biography from './Biography'
 import SkilL from './Skill'
 import Strengths from './Strengths'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -24,6 +25,9 @@ const About = () => {
               2025年に念願のIT業界への転職を実現。
               エンジニアとして新たなキャリアをスタートさせる。
             </p>
+            <div className="about_button common">
+            <Link to="/about">view more</Link>
+          </div>
         </div>
       </div>
     <Biography/>
