@@ -204,11 +204,12 @@ h2 {
 .about_content {
   position: relative;
   margin: 4%;
-  max-width:1000px;
+  max-width: 1000px;
   display: flex;
   margin: 0 auto;
   margin-bottom: 100px;
 }
+
 @media (max-width: 620px) {
   .about_content {
     flex-direction: column;
@@ -216,10 +217,23 @@ h2 {
 }
 
 .about_content .about_image {
+  position: relative;
   width: 50%;
   height: 450px;
   margin-right: 20px;
 }
+/* .about_content .about-image::after {
+  content: "";
+  top: 3%;
+  left: 3%;
+  position: absolute;
+  z-index: -10;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 450px;
+  background-color: #f6cf59;
+} */
 @media (max-width: 620px) {
   .about_content .about_image {
     width: 100%;
@@ -240,15 +254,19 @@ h2 {
   margin-top: 50px;
 }
 
+.about_content .about_text  {
+  width: 45%;
+  margin: auto;
+}
 @media (max-width: 620px) {
   .about_content .about_text {
     width: 100%;
   }
 }
-.about_content .about_text .name{
+.about_content .about_text .name {
   font-size: 2em;
 }
-.about_content .about_text span{
+.about_content .about_text span {
   font-size: 0.4em;
   margin-left: 5%;
 }
@@ -272,7 +290,7 @@ h2 {
   border-radius: 90px;
 }
 @media (max-width: 620px) {
-  .about_content .about_text .about_button  {
+  .about_content .about_text .about_button {
     width: 96%;
     bottom: -50px;
     right: 50%;
@@ -303,11 +321,226 @@ h2 {
   padding: 1%;
   border: 0.5px solid black;
   border-radius: 10px;
-} 
+  margin-bottom: 50px;
+}
 
 /* フッター部分 */
 .footer {
   padding: 0.5%;
   border-top: 0.5px solid #000;
   text-align: center;
+}
+.Biography {
+  margin-bottom: 0px;
+}
+
+/* BiogpraphyのCSS */
+.table {
+  height: 300px;
+  overflow-y: scroll;
+}
+.table .year {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 620px) {
+  .table .year {
+    flex-direction: column;
+  }
+}
+.table .year .mm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 150px;
+  font-size: 1.8em;
+  border-right: 0.5px;
+  position: relative;
+}
+.table .year .mm::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 100%;
+  background-color: #000;
+  border-radius: 50%;
+}
+@media (max-width: 620px) {
+  .table .year .mm {
+    width: 100%;
+  }
+}
+.table .year .yy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 150px;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+@media (max-width: 620px) {
+  .table .year .yy {
+    width: 100%;
+  }
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-bottom: 50px;
+}
+@media (max-width: 620px) {
+  .skills {
+    flex-direction: column;
+  }
+}
+.skills .design {
+  width: 47%;
+}
+@media (max-width: 620px) {
+  .skills .design {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+.skills .design h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.skills .design .text {
+  margin-bottom: 50px;
+}
+.skills .design .tool {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  max-width: 100px;
+  background-color: #f6cf59;
+  border-radius: 90px;
+  margin-right: 10px;
+}
+
+.skills .coding {
+  width: 47%;
+}
+@media (max-width: 620px) {
+  .skills .coding {
+    width: 100%;
+  }
+}
+.skills .coding h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.skills .coding .text {
+  margin-bottom: 50px;
+}
+.skills .coding .tool {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+  max-width: 100px;
+  background-color: #f6cf59;
+  border-radius: 90px;
+  margin-right: 10px;
+}
+
+/* strengthsのcss */
+
+.strengths {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 100px;
+}
+@media (max-width: 620px) {
+  .strengths {
+    flex-direction: column;
+  }
+}
+.strengths p {
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: left;
+}
+@media (max-width: 620px) {
+  .strengths p {
+    padding-left: 0%;
+  padding-right: 0%;
+  text-align: left;
+  margin-bottom: 50px;
+  }
+}
+h4 {
+  position: relative;
+  font-size: 2em;
+  margin-bottom: 100px;
+}
+.one h4:before {
+  content: "1";
+  position: absolute;
+  z-index: -10;
+  color: #f6cf59;
+  font-size: 2.5em;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.two h4:before {
+  content: "2";
+  position: absolute;
+  z-index: -10;
+  color: #f6cf59;
+  font-size: 2.5em;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.three h4:before {
+  content: "3";
+  position: absolute;
+  z-index: -10;
+  color: #f6cf59;
+  font-size: 2.5em;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.strengths .one {
+  width: calc(1000px / 3);
+}
+@media (max-width: 620px) {
+  .strengths .one{
+    width: 100%;
+  }
+}
+.strengths .two {
+  width: calc(1000px / 3);
+  margin-bottom: 50px;
+}
+@media (max-width: 620px) {
+  .strengths .two{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+.strengths .three {
+  width: calc(1000px / 3);
+}
+@media (max-width: 620px) {
+  .strengths .three{
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }

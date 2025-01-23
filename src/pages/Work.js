@@ -1,8 +1,9 @@
 import React from 'react'
+import List from './List'
 
 const Work = () => {
   return (
-    <div>Work</div>
+    <List/>
   )
 }
 
