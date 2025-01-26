@@ -1,7 +1,8 @@
 import React from "react";
 import List from "./List";
 import AboutMe from "./AboutMe";
-import Contact from "./Contact";
+import Contact from "./Contact.js";
+
 
 
 const MainView = () => {
