@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 import { Link } from "react-router-dom";
 
 const List = () => {
@@ -10,33 +9,33 @@ const List = () => {
         <div className="block">
           <img src="images/ryokann.png" alt="旅館"></img>
           <div className="detail">
-            <p className="virtual">仮想</p>
-            <p className="design">design|coding</p>
-            <span>旅館 「嶺」のHP</span>
+            <p className="virtual">仮想のHP</p>
+            <p className="design">旅館 「嶺」</p>
+            <span>design | coding</span>
           </div>
         </div>
         <div className="block">
           <img src="images/ryokann.png" alt="旅館"></img>
           <div className="detail">
-            <p className="virtual">仮想</p>
-            <p className="design">design|coding</p>
-            <span>旅館 「嶺」のHP</span>
+            <p className="virtual">仮想のHP</p>
+            <p className="design">旅館 「嶺」</p>
+            <span>design | coding</span>
           </div>
         </div>
         <div className="block">
           <img src="images/ryokann.png" alt="旅館"></img>
           <div className="detail">
-            <p className="virtual">仮想</p>
-            <p className="design">design|coding</p>
-            <span>旅館 「嶺」のHP</span>
+            <p className="virtual">仮想のHP</p>
+            <p className="design">旅館 「嶺」</p>
+            <span>design | coding</span>
           </div>
         </div>
         <div className="block">
           <img src="images/ryokann.png" alt="旅館"></img>
           <div className="detail">
-            <p className="virtual">仮想</p>
-            <p className="design">design|coding</p>
-            <span>旅館 「嶺」のHP</span>
+            <p className="virtual">仮想のHP</p>
+            <p className="design">旅館 「嶺」</p>
+            <span>design | coding</span>
           </div>
         </div>
       </div>

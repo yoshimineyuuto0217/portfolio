@@ -4,6 +4,7 @@ import Biography from './Biography'
 import SkilL from './Skill'
 import Strengths from './Strengths'
 import { Link } from 'react-router-dom'
+import Contact from './Contact'
 
 const About = () => {
   return (
@@ -13,6 +14,7 @@ const About = () => {
         <div className="about_image about-image">
           <img src="/images/big-photo0000-2780.jpg"></img>
         </div>
+        <div className='back_box'></div>
         <div className="about_text about-text">
           <h3 className="name">
             吉嶺 勇斗<span>（ Yoshimine yuuto ）</span>
@@ -25,14 +27,22 @@ const About = () => {
               2025年に念願のIT業界への転職を実現。
               エンジニアとして新たなキャリアをスタートさせる。
             </p>
-            <div className="about_button common">
-            <Link to="/about">view more</Link>
-          </div>
+            <p className="short">
+              <dl>
+                <dt>名称</dt>
+                <dd>key visual</dd>
+                <dt>所在地</dt>
+                <dd>鹿児島市内</dd>
+                <dt>お問い合わせ</dt>
+                <dd>jilingyongdou@gmail.com</dd>
+                <dt>事業内容</dt>
+                <dd>HTML・CSS・Javascriptによるコーディング<br/>wordpress・CMS導入<br/>HP ・LPのデザイン<br/></dd>
+              </dl>
+            </p>
         </div>
       </div>
-    <Biography/>
-    <SkilL/>
     <Strengths/>
+    <Contact/>
     </>
   )
 }

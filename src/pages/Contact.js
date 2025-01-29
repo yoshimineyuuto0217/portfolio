@@ -48,7 +48,7 @@ const Contact = () => {
       <h2>Contact</h2>
     <form className='common contact'  onSubmit={(event) =>handleSubmit(event)}> 
     <label for="name">Name</label>
-    <input type='text' onChange={handleName} value={name}></input>
+    <input type='text' onCh ange={handleName} value={name}></input>
     <label for="email">E-mail</label>
     <input type='text' onChange={handleEmail} value={email}></input>
     <label for="number" >Phone-number</label>

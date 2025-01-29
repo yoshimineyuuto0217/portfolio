@@ -1,6 +1,8 @@
 body {
   font-family: "Cormorant Garamond", serif;
-  background-color: #f7f7f7;
+  background-color: #010b01;
+  background-color: #000;
+  color: white;
 }
 
 .common {
@@ -19,7 +21,7 @@ body {
   padding-top: 2%;
   width: 20%;
   height: 100vh;
-  border-right: 1px solid black;
+  border-right: 0.25px solid white;
 }
 @media (max-width: 900px) {
   .container .side {
@@ -71,12 +73,12 @@ body {
 }
 
 .sidelink {
-  background-color: #f7f7f7;
+  background-color: black;
   text-align: center;
   margin-bottom: 25px;
 }
 .sidelink ul {
-  border-bottom: 0.5px solid #000;
+  border-bottom: 0.5px solid white;
 }
 
 .sidelink ul li {
@@ -85,7 +87,7 @@ body {
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  border-top: 0.5px solid black;
+  border-top: 0.5px solid white;
   position: relative;
   padding-top: 1.5%;
   padding-bottom: 1.5%;
@@ -93,7 +95,8 @@ body {
   10px 10px 20px 0px rgba(0, 0, 0, 0.3); */
 }
 .sidelink ul li:hover {
-  box-shadow: inset -5px -5px 20px 0px rgba(255, 255, 255, 0.5),
+  box-shadow:
+    inset -5px -5px 20px 0px rgba(255, 255, 255, 0.5),
     inset 5px 5px 20px 0px rgba(0, 0, 0, 0.3);
 }
 .sidelink ul li ::after {
@@ -109,14 +112,14 @@ body {
 
 .sidelink ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 5% 33% 5% 33%;
 }
 
 .sns {
   padding: 10px;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 .sns .instagram {
   max-width: 25px;
@@ -140,20 +143,21 @@ body {
 /* workページのCSS */
 
 h2 {
+  position: relative;
   padding-top: 2%;
   padding-bottom: 2%;
-  border-top: 0.5px solid black;
-  border-bottom: 0.5px solid black;
+  /* border-top: 0.5px solid black;
+  border-bottom: 0.5px solid black; */
   text-align: center;
   margin-bottom: 100px;
-  font-size: 2.5em;
-  background-color: #f7f7f7;
+  font-size: 4em;
+  /* background-color: #010B01 ; */
 }
 
 .works {
   display: flex;
   justify-content: space-between;
-  max-width: 1000px;
+  width: 80%;
   flex-wrap: wrap;
   gap: 50px;
   margin: auto;
@@ -169,9 +173,9 @@ h2 {
 }
 
 .works .block {
-  max-width: 450px;
-  max-height: 450px;
-  margin-bottom: 50px;
+  width: 45%;
+  /* height: 50%; */
+  margin-bottom: 75px;
 }
 @media (max-width: 1237px) {
   .works .block {
@@ -181,26 +185,33 @@ h2 {
 .works .block img {
   width: 100%;
   height: 100%;
+  margin-bottom: 20px;
   vertical-align: bottom;
 }
 .works .block .detail {
-  border: 1px solid black;
   text-align: left;
-  background-color: white;
+  align-items: center;
+}
+.works .block .detail .virtual {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border: 0.5px solid white;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .works .block .detail p {
   display: inline;
-  font-family: "Zen Old Mincho", serif;
 }
-
 .works .block .detail span {
   display: block;
+  padding-left: 5px;
 }
 .btn {
   width: 300px;
   height: 40px;
-  border: 0.5px solid black;
-  background-color: #f7f7f7;
+  border: 0.5px solid white;
   margin: auto;
   text-align: center;
   margin-bottom: 100px;
@@ -211,7 +222,8 @@ h2 {
 }
 
 .btn:hover {
-  box-shadow: inset -5px -5px 20px 0px rgba(255, 255, 255, 0.5),
+  box-shadow:
+    inset -5px -5px 20px 0px rgba(255, 255, 255, 0.5),
     inset 5px 5px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -222,15 +234,15 @@ h2 {
 
 .btn button a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 /* aboutページのcss */
 .about_content {
-  text-align:center;
+  text-align: center;
   position: relative;
   margin: 4%;
-  max-width: 1000px;
+  width: 80%;
   display: flex;
   margin: 0 auto;
   margin-bottom: 100px;
@@ -244,20 +256,49 @@ h2 {
 
 .about_content .about_image {
   position: relative;
+  z-index: 10;
   width: 50%;
   height: 450px;
   margin-right: 20px;
 }
-.about_content .about-image::after {
-  content: "";
-  top: 3%;
-  left: 3%;
+.about_content .back_box{
   position: absolute;
-  z-index: -10;
+  left: 3%;
+  top: 3%;
+  z-index: 1;
+  width: 48%;
+  height: 450px;
+  background-color: white;
+}
+.back_box::after {
+  position: absolute;
+  color: black;
+  bottom: 3.5%;
+  right: 1%;
+  display: inline-block;
+  content: "hover";
+  width: 50px;
+  height: 1px;
+}
+.back_box:hover::after {
+  content: "hoverout";
+}
+.about_content .back_box:hover{
+  position: absolute;
+  left: 3%;
+  top: 3%;
   width: 100%;
   height: 450px;
-  background-color: #f6cf59;
+  transition: 1s ease-in-out;
+  background-color: white;
 }
+/* 親要素内で .back_box が hover されたとき */
+.about_content:hover .back_box:hover + .about_text {
+  color: black;
+}
+
+
+
 @media (max-width: 620px) {
   .about_content .about_image {
     width: 100%;
@@ -270,12 +311,41 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
-
+.back_text {
+  color: #000;
+}
 .about_content .about_text {
+  position: relative;
+  z-index: 10;
   width: 40%;
   margin-top: 50px;
 }
 
+.back_box:hover ~ .about_text .long {
+  display: none;
+}
+.back_box:hover ~ .about_text .short {
+  display: block;
+}
+.about_text .long {
+  display: block;
+}
+.about_text .short {
+  display: none;
+}
+.about_text .short dl {
+  padding-top:50px ;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.about_text .short dl dt {
+  width: 30%;
+  margin-bottom: 15px;
+}
+.about_text .short dl dd {
+  width: 70%;
+}
 .about_content .about_text {
   width: 45%;
   margin: auto;
@@ -287,6 +357,7 @@ h2 {
 }
 .about_content .about_text .name {
   font-size: 2em;
+  margin-bottom: 25px;
 }
 .about_content .about_text span {
   font-size: 0.4em;
@@ -302,16 +373,27 @@ h2 {
   width: 250px;
   height: 30px;
   margin: auto;
+  display: flex;
   align-items: center;
-  border:  0.5px solid  black;
-  background-color: #f7f7f7;
+  justify-content: center;
+  border: 0.5px solid white;
 }
+@media (max-width: 620px) {
+  .about_content .about_text .about_button {
+    width: 96%;
+    margin: 0 auto;
+    position: relative;
+    transform: none; /* 中央揃えのためにリセット */
+  }
+}
+
 .about_content .about_text .about_button a {
   text-decoration: none;
-  color: #000;
+  color: white;
 }
 .about_content .about_text .about_button:hover {
-  box-shadow: inset -5px -5px 20px 0px rgba(255, 255, 255, 0.5),
+  box-shadow:
+    inset -5px -5px 20px 0px rgba(255, 255, 255, 0.5),
     inset 5px 5px 20px 0px rgba(0, 0, 0, 0.3);
 }
 @media (max-width: 620px) {
@@ -326,7 +408,7 @@ h2 {
 /* お問い合わせcss */
 
 .contact {
-  max-width: 1000px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -352,8 +434,8 @@ h2 {
 /* フッター部分 */
 .footer {
   padding: 0.5%;
-  border-top: 0.5px solid black;
-  background-color: #f7f7f7;
+  border-top: 0.5px solid white;
+  background-color: black;
   text-align: center;
 }
 .Biography {
@@ -481,11 +563,11 @@ h2 {
 /* strengthsのcss */
 
 .strengths {
-  display: flex;
-  max-width: 1000px;
+  width: 100%;
   margin: auto;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 300px;
+  border-bottom: white 1.5px solid;
 }
 @media (max-width: 620px) {
   .strengths {
@@ -508,78 +590,119 @@ h2 {
 }
 h4 {
   position: relative;
-  font-size: 2em;
-  margin-bottom: 100px;
+  font-size: 1.5rem;
+  height: 100px;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: white 1.5px solid;
+}
+@media (max-width: 800px) {
+  h4 {
+    width: 100%;
+  }
 }
 .one h4:before {
-  content: "1";
+  content: "01";
   position: absolute;
   z-index: -10;
-  color: #f6cf59;
+  color: #4591e6;
   font-size: 2.5em;
-  top: -50%;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 .two h4:before {
-  content: "2";
+  content: "02";
   position: absolute;
   z-index: -10;
-  color: #f6cf59;
+  color: #4591e6;
   font-size: 2.5em;
-  top: -50%;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 .three h4:before {
-  content: "3";
+  content: "03";
   position: absolute;
   z-index: -10;
-  color: #f6cf59;
+  color: #4591e6;
   font-size: 2.5em;
-  top: -50%;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 .strengths .one {
-  width: calc(1000px / 3);
-}
-@media (max-width: 620px) {
-  .strengths .one {
-    width: 100%;
-  }
+  display: flex;
+  border-left: 3px solid white;
 }
 .strengths .two {
-  width: calc(1000px / 3);
-  margin-bottom: 50px;
-}
-@media (max-width: 620px) {
-  .strengths .two {
-    width: 100%;
-    margin-bottom: 50px;
-  }
+  display: flex;
+  border-left: 3px solid white;
 }
 .strengths .three {
-  width: calc(1000px / 3);
+  display: flex;
+  border-left: 3px solid white;
 }
-@media (max-width: 620px) {
-  .strengths .three {
+.strengths .one:last-child {
+  border-left: 3px solid white;
+}
+@media (max-width: 800px) {
+  .strengths .one {
     width: 100%;
-    margin-bottom: 50px;
+    flex-direction: column;
   }
 }
-
+.strengths .one p {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  border-top: white 2px solid;
+}
+@media (max-width: 800px) {
+  .strengths .one p {
+    width: 100%;
+    margin-bottom: 90px;
+  }
+}
+.strengths .two p {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  border-top:  white 2px solid;
+}
+@media (max-width: 800px) {
+  .strengths .two p {
+    width: 100%;
+    margin-bottom: 90px;
+  }
+}
+.strengths .three p {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  border-top: white 2px solid;
+}
+@media (max-width: 800px) {
+  .strengths .threep {
+    width: 100%;
+    margin-bottom: 90px;
+  }
+}
 .submit {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1000px;
+  width: 100%;
   height: 50px;
-  /* box-shadow: 0px 15px 20px -6px rgba(0, 0, 0, 1);  */
-  border: 0.5px solid black;
-  background-color: #f7f7f7;
+  border: 0.5px solid white;
+}
+button {
+  color: white;
 }
 .submit:hover {
-  box-shadow: inset -5px -5px 20px 0px rgba(255, 255, 255, 0.5),
+  box-shadow:
+    inset -5px -5px 20px 0px rgba(255, 255, 255, 0.5),
     inset 5px 5px 20px 0px rgba(0, 0, 0, 0.3);
-} 
+}
