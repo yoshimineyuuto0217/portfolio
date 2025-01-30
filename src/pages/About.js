@@ -5,6 +5,7 @@ import SkilL from './Skill'
 import Strengths from './Strengths'
 import { Link } from 'react-router-dom'
 import Contact from './Contact'
+import Flow from './Flow'
 
 const About = () => {
   return (
@@ -42,6 +43,7 @@ const About = () => {
         </div>
       </div>
     <Strengths/>
+    <Flow/>
     <Contact/>
     </>
   )
