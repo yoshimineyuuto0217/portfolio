@@ -5,7 +5,7 @@ const SideBar = () => {
   return (
     <div className="contain">
       <div className="mylogo">
-        <img src="/svg/x-2 (1).svg"></img>
+        <img src="/svg/1.svg"/>
       </div>
       <div className="iner">
       <nav className="sidelink">
